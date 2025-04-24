@@ -1,18 +1,41 @@
 import { Check } from "lucide-react";
 import { CaseStudy } from "@/lib/types";
+import ImageWithFallback from "@/components/ui/image-with-fallback";
 
 interface CaseStudyCardProps {
   caseStudy: CaseStudy;
 }
 
 const CaseStudyCard = ({ caseStudy }: CaseStudyCardProps) => {
+  // Define fixed tag colors to avoid dynamic class issues
+  const getTagColors = (color: string) => {
+    switch (color) {
+      case 'blue':
+        return 'bg-blue-100 text-blue-800';
+      case 'green':
+        return 'bg-green-100 text-green-800';
+      case 'red':
+        return 'bg-red-100 text-red-800';
+      case 'purple':
+        return 'bg-purple-100 text-purple-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-      <img className="h-64 w-full object-cover" src={caseStudy.imageUrl} alt={caseStudy.title} />
+      <div className="h-64 w-full">
+        <ImageWithFallback 
+          className="h-full w-full object-cover" 
+          src={caseStudy.imageUrl} 
+          alt={caseStudy.title} 
+        />
+      </div>
       <div className="p-6 flex-grow">
         <div className="flex items-center mb-4">
           <span 
-            className={`bg-${caseStudy.tagColor}-100 text-${caseStudy.tagColor}-800 text-xs px-2 py-1 rounded-full uppercase font-medium`}
+            className={`${getTagColors(caseStudy.tagColor)} text-xs px-2 py-1 rounded-full uppercase font-medium`}
           >
             {caseStudy.tag}
           </span>

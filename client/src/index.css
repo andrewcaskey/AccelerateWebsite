@@ -17,6 +17,8 @@
   --primary-foreground: 211 100% 99%;
   --secondary: 60 4.8% 95.9%;
   --secondary-foreground: 24 9.8% 10%;
+  --secondary-dark: 200 13% 20%;
+  --secondary-text: 200 13% 25%;
   --accent: 60 4.8% 95.9%;
   --accent-foreground: 24 9.8% 10%;
   --destructive: 0 84.2% 60.2%;
@@ -61,6 +63,14 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  .text-secondary {
+    color: hsl(var(--secondary-text));
+  }
+  
+  .text-secondary-dark {
+    color: hsl(var(--secondary-dark));
+  }
 }
 
 .gradient-bg {
@@ -75,4 +85,10 @@
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
 }

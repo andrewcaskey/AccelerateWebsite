@@ -30,9 +30,26 @@ const HeroSection = () => {
           </div>
           <div className="mt-12 lg:mt-0 lg:col-span-6">
             <div className="relative h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-              <svg className="w-full h-full object-contain animate-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#0D9488" d="M49.5,-67.2C64.9,-57.4,78.7,-44.1,83.7,-28C88.8,-11.9,85.1,7.1,78.5,24.9C71.9,42.7,62.5,59.3,48.6,67.6C34.6,75.9,16.1,75.9,-0.7,76.9C-17.6,77.9,-35.3,79.9,-50.1,73C-64.9,66.1,-76.8,50.3,-81.9,32.3C-87,14.4,-85.3,-5.7,-78.9,-23.2C-72.4,-40.7,-61.3,-55.6,-47.1,-65.7C-32.9,-75.9,-15.5,-81.2,0.8,-82.2C17,-83.3,34.1,-77.1,49.5,-67.2Z" transform="translate(100 100)" />
-              </svg>
+              <div className="w-full h-full flex items-center justify-center animate-float">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full max-w-md transform animate-pulse" style={{ animation: 'pulse 3s infinite' }}>
+                  {/* Web development/coding icon */}
+                  <path d="M16 18l6-6-6-6" fill="none" stroke="#0D9488" strokeWidth="2" />
+                  <path d="M8 6l-6 6 6 6" fill="none" stroke="#0D9488" strokeWidth="2" />
+                  <path d="M12 2l-4 20" fill="none" stroke="#0D9488" strokeWidth="2" />
+                  
+                  {/* Circular background */}
+                  <circle cx="12" cy="12" r="10" fill="#0D948820" />
+                  
+                  {/* Additional elements suggesting speed/performance */}
+                  <path d="M20 12h-4" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  <path d="M4 12h4" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  <path d="M12 4v4" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  <path d="M12 16v4" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  
+                  {/* Graph line suggesting analytics/performance */}
+                  <path d="M5 16l3-4 2 2 4-6 2 1" fill="none" stroke="#0D9488" strokeWidth="1" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Check } from "lucide-react";
 import { ServiceDetail as ServiceDetailType } from "@/lib/types";
+import ImageWithFallback from "@/components/ui/image-with-fallback";
 
 interface ServiceDetailProps {
   service: ServiceDetailType;
@@ -37,13 +38,21 @@ const ServiceDetail = ({ service, isReversed }: ServiceDetailProps) => {
             </div>
           </div>
           <div className="mt-10 lg:mt-0 lg:col-span-6">
-            <img className="rounded-lg shadow-lg" src={service.imageUrl} alt={service.title} />
+            <ImageWithFallback 
+              className="rounded-lg shadow-lg w-full h-auto object-cover aspect-video" 
+              src={service.imageUrl} 
+              alt={service.title} 
+            />
           </div>
         </>
       ) : (
         <>
           <div className="lg:col-span-6 order-last lg:order-first">
-            <img className="rounded-lg shadow-lg" src={service.imageUrl} alt={service.title} />
+            <ImageWithFallback 
+              className="rounded-lg shadow-lg w-full h-auto object-cover aspect-video" 
+              src={service.imageUrl} 
+              alt={service.title} 
+            />
           </div>
           <div className="mt-10 lg:mt-0 lg:col-span-6">
             <h2 className="text-3xl font-bold text-secondary-dark">{service.title}</h2>
