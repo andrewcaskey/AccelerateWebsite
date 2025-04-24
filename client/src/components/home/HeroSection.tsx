@@ -31,23 +31,57 @@ const HeroSection = () => {
           <div className="mt-12 lg:mt-0 lg:col-span-6">
             <div className="relative h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
               <div className="w-full h-full flex items-center justify-center animate-float">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full max-w-md transform animate-pulse" style={{ animation: 'pulse 3s infinite' }}>
-                  {/* Web development/coding icon */}
-                  <path d="M16 18l6-6-6-6" fill="none" stroke="#0D9488" strokeWidth="2" />
-                  <path d="M8 6l-6 6 6 6" fill="none" stroke="#0D9488" strokeWidth="2" />
-                  <path d="M12 2l-4 20" fill="none" stroke="#0D9488" strokeWidth="2" />
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-md">
+                  {/* Main circle */}
+                  <circle cx="250" cy="250" r="200" fill="#f8f9fa" stroke="#0D9488" strokeWidth="8" />
                   
-                  {/* Circular background */}
-                  <circle cx="12" cy="12" r="10" fill="#0D948820" />
+                  {/* Decorative elements */}
+                  <circle cx="250" cy="250" r="230" fill="none" stroke="#0D9488" strokeWidth="3" strokeDasharray="15,15" />
                   
-                  {/* Additional elements suggesting speed/performance */}
-                  <path d="M20 12h-4" fill="none" stroke="#0D9488" strokeWidth="1" />
-                  <path d="M4 12h4" fill="none" stroke="#0D9488" strokeWidth="1" />
-                  <path d="M12 4v4" fill="none" stroke="#0D9488" strokeWidth="1" />
-                  <path d="M12 16v4" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  {/* Laptop base */}
+                  <rect x="130" y="200" width="240" height="150" rx="10" fill="#0D9488" />
                   
-                  {/* Graph line suggesting analytics/performance */}
-                  <path d="M5 16l3-4 2 2 4-6 2 1" fill="none" stroke="#0D9488" strokeWidth="1" />
+                  {/* Laptop screen */}
+                  <rect x="140" y="130" width="220" height="140" rx="5" fill="white" stroke="#0D9488" strokeWidth="8" />
+                  
+                  {/* Screen content - code lines */}
+                  <line x1="160" y1="150" x2="240" y2="150" stroke="#0D9488" strokeWidth="4" />
+                  <line x1="160" y1="170" x2="340" y2="170" stroke="#0D9488" strokeWidth="4" />
+                  <line x1="160" y1="190" x2="280" y2="190" stroke="#0D9488" strokeWidth="4" />
+                  <line x1="160" y1="210" x2="320" y2="210" stroke="#0D9488" strokeWidth="4" />
+                  <line x1="160" y1="230" x2="260" y2="230" stroke="#0D9488" strokeWidth="4" />
+                  
+                  {/* Speed lines */}
+                  <path d="M390,150 C420,180 430,220 430,250" fill="none" stroke="#0D9488" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M400,130 C440,170 450,210 450,250" fill="none" stroke="#0D9488" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M410,110 C460,160 470,200 470,250" fill="none" stroke="#0D9488" strokeWidth="5" strokeLinecap="round" />
+                  
+                  {/* Decorative gears */}
+                  <circle cx="100" cy="350" r="30" fill="#0D9488" opacity="0.8">
+                    <animateTransform 
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="0 100 350" 
+                      to="360 100 350" 
+                      dur="10s" 
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="100" cy="350" r="15" fill="white" />
+                  
+                  <circle cx="400" cy="350" r="25" fill="#0D9488" opacity="0.8">
+                    <animateTransform 
+                      attributeName="transform" 
+                      attributeType="XML" 
+                      type="rotate" 
+                      from="360 400 350" 
+                      to="0 400 350" 
+                      dur="8s" 
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="400" cy="350" r="12" fill="white" />
                 </svg>
               </div>
             </div>

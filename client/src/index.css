@@ -65,11 +65,11 @@
   }
   
   .text-secondary {
-    color: hsl(var(--secondary-text));
+    color: #000000;
   }
   
   .text-secondary-dark {
-    color: hsl(var(--secondary-dark));
+    color: #000000;
   }
 }
 
